@@ -1,0 +1,84 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions for gradients and effects -->
+    <defs>
+        <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0099ff;stop-opacity:1" />
+        </linearGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00b8ff;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Shield Background with subtle fill -->
+    <path d="M 50 15 L 90 15 L 100 25 L 100 75 Q 100 95 70 105 Q 40 95 40 75 L 40 25 Z" 
+          fill="url(#shieldGradient)" 
+          opacity="0.15"/>
+    
+    <!-- Shield Main Outline -->
+    <path d="M 50 15 L 90 15 L 100 25 L 100 75 Q 100 95 70 105 Q 40 95 40 75 L 40 25 Z" 
+          fill="none" 
+          stroke="url(#shieldGradient)" 
+          stroke-width="3"
+          filter="url(#glow)"/>
+    
+    <!-- Inner shield detail lines -->
+    <path d="M 53 20 L 87 20 L 95 28 L 95 73 Q 95 88 70 97 Q 45 88 45 73 L 45 28 Z" 
+          fill="none" 
+          stroke="#00d9ff" 
+          stroke-width="0.8"
+          opacity="0.4"/>
+    
+    <!-- Large Q Symbol in center -->
+    <circle cx="70" cy="52" r="20" fill="none" stroke="#00d9ff" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="82" y1="64" x2="92" y2="74" stroke="#00d9ff" stroke-width="3.5" stroke-linecap="round"/>
+    
+    <!-- Quantum dot inside Q -->
+    <circle cx="70" cy="52" r="4" fill="#00d9ff" opacity="0.6"/>
+    
+    <!-- Circuit pattern details at bottom -->
+    <circle cx="55" cy="85" r="2" fill="#00d9ff"/>
+    <circle cx="70" cy="88" r="2" fill="#00d9ff"/>
+    <circle cx="85" cy="85" r="2" fill="#00d9ff"/>
+    <line x1="55" y1="85" x2="70" y2="70" stroke="#00d9ff" stroke-width="1" opacity="0.5"/>
+    <line x1="85" y1="85" x2="70" y2="70" stroke="#00d9ff" stroke-width="1" opacity="0.5"/>
+    <line x1="70" y1="88" x2="70" y2="72" stroke="#00d9ff" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Small decorative hex nodes -->
+    <polygon points="48,40 50,38 52,40 52,43 50,45 48,43" fill="none" stroke="#00d9ff" stroke-width="0.8" opacity="0.3"/>
+    <polygon points="88,40 90,38 92,40 92,43 90,45 88,43" fill="none" stroke="#00d9ff" stroke-width="0.8" opacity="0.3"/>
+    
+    <!-- Company Name - QUANTUM -->
+    <text x="125" y="55" 
+          font-family="'Orbitron', 'Arial Black', sans-serif" 
+          font-size="32" 
+          font-weight="900" 
+          fill="url(#textGradient)" 
+          letter-spacing="3">QUANTUM</text>
+    
+    <!-- Company Name - INNOVATION -->
+    <text x="125" y="80" 
+          font-family="'Orbitron', 'Arial', sans-serif" 
+          font-size="16" 
+          font-weight="600" 
+          fill="#a8b3cf" 
+          letter-spacing="6">INNOVATION</text>
+    
+    <!-- Tagline -->
+    <text x="125" y="98" 
+          font-family="'Rajdhani', 'Arial', sans-serif" 
+          font-size="11" 
+          fill="#7a8aa0" 
+          letter-spacing="2">CYBERSECURITY • AI SOLUTIONS</text>
+    
+    <!-- Decorative line accent -->
+    <line x1="125" y1="48" x2="155" y2="48" stroke="#00d9ff" stroke-width="2" opacity="0.6"/>
+</svg>
